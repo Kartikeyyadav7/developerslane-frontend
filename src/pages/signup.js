@@ -115,10 +115,7 @@ class signup extends Component {
 						signup
 					</Button>
 				</form>
-				<Typography
-					variant="body2"
-					style={{ textAlign: "center", marginTop: "1rem" }}
-				>
+				<Typography variant="body2" style={{ textAlign: "center" }}>
 					Already have an account <Link to="/login">Login</Link>
 				</Typography>
 			</Paper>

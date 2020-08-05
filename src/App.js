@@ -46,25 +46,27 @@ class App extends Component {
 			<Provider store={store}>
 				<Router>
 					<Navbar />
-					<Switch>
-						<Route exact path="/" component={Home} />
-						<Route exact path="/login" component={Login} />
-						<Route exact path="/signup" component={Signup} />
-						<ProtectedRoute exact path="/dashboard" component={Dashboard} />
-						<ProtectedRoute
-							exact
-							path="/create-profile"
-							component={CreateProfile}
-						/>
-						<ProtectedRoute
-							exact
-							path="/edit-profile"
-							component={EditProfile}
-						/>
-						<ProtectedRoute exact path="/posts" component={Posts} />
-						<ProtectedRoute exact path="/postform" component={PostForm} />
-						<ProtectedRoute exact path="/post/:id" component={Post} />
-					</Switch>
+					<div className="App">
+						<Switch>
+							<Route exact path="/" component={Home} />
+							<Route exact path="/login" component={Login} />
+							<Route exact path="/signup" component={Signup} />
+							<ProtectedRoute exact path="/dashboard" component={Dashboard} />
+							<ProtectedRoute
+								exact
+								path="/create-profile"
+								component={CreateProfile}
+							/>
+							<ProtectedRoute
+								exact
+								path="/edit-profile"
+								component={EditProfile}
+							/>
+							<ProtectedRoute exact path="/posts" component={Posts} />
+							<ProtectedRoute exact path="/postform" component={PostForm} />
+							<ProtectedRoute exact path="/post/:id" component={Post} />
+						</Switch>
+					</div>
 				</Router>
 			</Provider>
 		);

@@ -25,65 +25,66 @@ class Navbar extends Component {
 		const { isAuthenticated, user } = this.props.auth;
 		const { classes } = this.props;
 		const authLinks = (
-			<div className={classes.authLinks}>
-				<Button
-					color="inherit"
-					className={classes.titleChange}
-					component={Link}
-					to="/"
-				>
-					<img src={logo} alt="logo" width="15%" />
-				</Button>
-				<Button color="inherit" component={Link} to="/dashboard">
-					Profile
-				</Button>
-				<Button color="inherit" component={Link} to="/posts">
-					Posts
-				</Button>
-				<div className={classes.loggedUser}>
-					<Avatar
-						alt={user.name}
-						src={user.avatar}
-						className={classes.avatar}
-					/>
-					<a
-						href="/login"
-						onClick={this.handleLogout}
-						className={classes.logout}
+			<AppBar position="static">
+				<Toolbar className={classes.container}>
+					<Button
+						color="inherit"
+						className={classes.title}
+						component={Link}
+						to="/"
 					>
-						LOGOUT
-					</a>
-				</div>
-			</div>
+						<img src={logo} alt="logo" className={classes.img} />
+					</Button>
+					<div className={classes.authItems}>
+						<Button color="inherit" component={Link} to="/dashboard">
+							Profile
+						</Button>
+						<Button color="inherit" component={Link} to="/posts">
+							Posts
+						</Button>
+
+						<Avatar
+							alt={user.name}
+							src={user.avatar}
+							className={classes.avatar}
+						/>
+						<a
+							href="/login"
+							onClick={this.handleLogout}
+							className={classes.logout}
+						>
+							LOGOUT
+						</a>
+					</div>
+				</Toolbar>
+			</AppBar>
 		);
 
 		const guestLinks = (
-			<div>
-				{" "}
-				<Button
-					color="inherit"
-					className={classes.title}
-					component={Link}
-					to="/"
-				>
-					<img src={logo} alt="logo" width="15%" />
-				</Button>
-				<Button color="inherit" component={Link} to="/login">
-					Login
-				</Button>
-				<Button color="inherit" component={Link} to="/signup">
-					signup
-				</Button>
-			</div>
+			<AppBar position="static">
+				<Toolbar className={classes.container}>
+					{" "}
+					<Button
+						color="inherit"
+						className={classes.title}
+						component={Link}
+						to="/"
+					>
+						<img src={logo} alt="logo" className={classes.img} />
+					</Button>
+					<div>
+						<Button color="inherit" component={Link} to="/login">
+							Login
+						</Button>
+						<Button color="inherit" component={Link} to="/signup">
+							signup
+						</Button>
+					</div>
+				</Toolbar>
+			</AppBar>
 		);
 
-		return (
-			<div className={classes.root}>
-				<AppBar position="static">
-					<Toolbar>{isAuthenticated ? authLinks : guestLinks}</Toolbar>
-				</AppBar>
-			</div>
-		);
+		return <div>{isAuthenticated ? authLinks : guestLinks}</div>;
 	}
 }
 

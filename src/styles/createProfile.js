@@ -1,11 +1,15 @@
 const styles = (theme) => ({
 	PaperItem: {
-		display: "flex",
-		flexDirection: "column",
-		flexWrap: "wrap",
 		margin: "1rem auto",
 		maxWidth: "1100px",
 		height: "250vh",
+	},
+	profileContainer: {
+		width: `40%`,
+		margin: `0 auto`,
+		[theme.breakpoints.down("xs")]: {
+			width: `80%`,
+		},
 	},
 	formItems: {
 		marginTop: "1rem",

@@ -5,6 +5,9 @@ const styles = (theme) => ({
 		margin: "auto",
 		flexWrap: "wrap",
 		alignContent: "flexStart",
+		[theme.breakpoints.down("sm")]: {
+			width: "0",
+		},
 	},
 });
 

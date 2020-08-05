@@ -54,8 +54,8 @@ class Dashboard extends Component {
 							Welcome , <Link to={`/profile/${profile.handle}`}>{name}</Link>
 						</Typography>
 						<Paper className={classes.start}>
-							<Grid container direction="column">
-								<Grid item xs={12}>
+							<Grid container className={classes.dashboardContainer}>
+								<Grid item /*max-width: 50%;*/>
 									<div className={classes.imageWrapper}>
 										<img
 											src={avatar}
@@ -64,7 +64,7 @@ class Dashboard extends Component {
 										/>
 									</div>
 								</Grid>
-								<Grid item xs={12}>
+								<Grid item>
 									<div className={classes.subroot}>
 										<Typography
 											variant="body2"

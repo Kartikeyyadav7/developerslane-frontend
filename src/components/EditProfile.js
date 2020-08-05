@@ -104,191 +104,177 @@ class CreateProfile extends Component {
 		const { errors } = this.state;
 		return (
 			<Paper elevation={3} className={classes.PaperItem}>
-				<Typography
-					variant="h5"
-					align="right"
-					display="block"
-					style={{ margin: "0 auto" }}
-				>
-					{" "}
-					EDIT PROFILE{" "}
-				</Typography>
-				<Typography
-					style={{
-						alignSelf: "center",
-						marginTop: "5rem",
-						marginRight: "7rem",
-					}}
-				>
-					* required field
-				</Typography>
-				<form
-					className={classes.formItems}
-					noValidate
-					onSubmit={this.handleSubmit}
-				>
-					<Typography variant="h6">* Handle</Typography>
-					<TextField
-						id="handle"
-						name="handle"
-						type="handle"
-						value={this.state.handle}
-						onChange={this.handleChange}
-						placeholder="Handle"
-						style={{ width: "15rem" }}
-					/>
-					<Typography variant="h6" style={{ marginTop: "2rem" }}>
-						Location
-					</Typography>
-					<TextField
-						id="location"
-						name="location"
-						type="location"
-						value={this.state.location}
-						onChange={this.handleChange}
-						placeholder="Location"
-						style={{ width: "15rem" }}
-					/>
-					<Typography variant="h6" style={{ marginTop: "2rem" }}>
-						Website
-					</Typography>
-					<TextField
-						id="website"
-						name="website"
-						type="website"
-						value={this.state.website}
-						onChange={this.handleChange}
-						placeholder="Website"
-						style={{ width: "15rem" }}
-					/>
-					<Typography variant="h6" style={{ marginTop: "2rem" }}>
-						Company
-					</Typography>
-					<TextField
-						id="company"
-						name="company"
-						type="company"
-						value={this.state.company}
-						onChange={this.handleChange}
-						placeholder="Company"
-						style={{ width: "15rem" }}
-					/>
-
-					<Typography variant="h6" style={{ marginTop: "2rem" }}>
-						* Skills
-					</Typography>
-					<TextField
-						id="skills"
-						name="skills"
-						type="skills"
-						value={this.state.skills}
-						onChange={this.handleChange}
-						placeholder="Skills"
-						helperText="Please provide skills separarted by ',' eg=html,css,js,react  "
-						style={{ width: "15rem" }}
-					/>
-					<Typography variant="h6" style={{ marginTop: "2rem" }}>
-						* Status
-					</Typography>
-					<TextField
-						id="status"
-						name="status"
-						type="status"
-						value={this.state.status}
-						onChange={this.handleChange}
-						placeholder="Status"
-						style={{ width: "15rem" }}
-					/>
-					<Typography variant="h6" style={{ marginTop: "2rem" }}>
-						Bio
-					</Typography>
-					<TextField
-						id="bio"
-						name="bio"
-						type="bio"
-						value={this.state.bio}
-						onChange={this.handleChange}
-						placeholder="Bio"
-						variant="outlined"
-						multiline
-						rows={3}
-						style={{ width: "15rem" }}
-					/>
-					<Typography variant="h6" style={{ marginTop: "2rem" }}>
-						Twitter
-					</Typography>
-					<TextField
-						id="twitter"
-						name="twitter"
-						type="twitter"
-						value={this.state.twitter}
-						onChange={this.handleChange}
-						placeholder="Twitter"
-						style={{ width: "15rem" }}
-					/>
-					<Typography variant="h6" style={{ marginTop: "2rem" }}>
-						Instagram
-					</Typography>
-					<TextField
-						id="instagram"
-						name="instagram"
-						type="instagram"
-						value={this.state.instagram}
-						onChange={this.handleChange}
-						placeholder="Instagram"
-						style={{ width: "15rem" }}
-					/>
-					<Typography variant="h6" style={{ marginTop: "2rem" }}>
-						Youtube
-					</Typography>
-					<TextField
-						id="youtube"
-						name="youtube"
-						type="youtube"
-						value={this.state.youtube}
-						onChange={this.handleChange}
-						placeholder="Youtube"
-						style={{ width: "15rem" }}
-					/>
-					<Typography variant="h6" style={{ marginTop: "2rem" }}>
-						LinkedIn
-					</Typography>
-					<TextField
-						id="linkedIn"
-						name="linkedIn"
-						type="linkedIn"
-						value={this.state.linkedIn}
-						onChange={this.handleChange}
-						placeholder="LinkedIn"
-						style={{ width: "15rem" }}
-					/>
-					<Typography variant="h6" style={{ marginTop: "2rem" }}>
-						Facebook
-					</Typography>
-					<TextField
-						id="facebook"
-						name="facebook"
-						type="facebook"
-						value={this.state.facebook}
-						onChange={this.handleChange}
-						placeholder="Facebook"
-						style={{ width: "15rem" }}
-					/>
-
-					{errors.errors && (
-						<Typography variant="body2" className={classes.error}>
-							{errors.errors}
-						</Typography>
-					)}
-					<Button
-						type="submit"
-						variant="contained"
-						color="primary"
-						className={classes.button}
+				<div className={classes.profileContainer}>
+					<Typography variant="h5"> EDIT PROFILE </Typography>
+					<Typography variant="subtitle1">* required field</Typography>
+					<form
+						className={classes.formItems}
+						noValidate
+						onSubmit={this.handleSubmit}
 					>
-						Submit
-					</Button>
-				</form>
+						<Typography variant="h6">* Handle</Typography>
+						<TextField
+							id="handle"
+							name="handle"
+							type="handle"
+							value={this.state.handle}
+							onChange={this.handleChange}
+							placeholder="Handle"
+							style={{ width: "15rem" }}
+						/>
+						<Typography variant="h6" style={{ marginTop: "2rem" }}>
+							Location
+						</Typography>
+						<TextField
+							id="location"
+							name="location"
+							type="location"
+							value={this.state.location}
+							onChange={this.handleChange}
+							placeholder="Location"
+							style={{ width: "15rem" }}
+						/>
+						<Typography variant="h6" style={{ marginTop: "2rem" }}>
+							Website
+						</Typography>
+						<TextField
+							id="website"
+							name="website"
+							type="website"
+							value={this.state.website}
+							onChange={this.handleChange}
+							placeholder="Website"
+							style={{ width: "15rem" }}
+						/>
+						<Typography variant="h6" style={{ marginTop: "2rem" }}>
+							Company
+						</Typography>
+						<TextField
+							id="company"
+							name="company"
+							type="company"
+							value={this.state.company}
+							onChange={this.handleChange}
+							placeholder="Company"
+							style={{ width: "15rem" }}
+						/>
+
+						<Typography variant="h6" style={{ marginTop: "2rem" }}>
+							* Skills
+						</Typography>
+						<TextField
+							id="skills"
+							name="skills"
+							type="skills"
+							value={this.state.skills}
+							onChange={this.handleChange}
+							placeholder="Skills"
+							helperText="Please provide skills separarted by ',' eg=html,css,js,react  "
+							style={{ width: "15rem" }}
+						/>
+						<Typography variant="h6" style={{ marginTop: "2rem" }}>
+							* Status
+						</Typography>
+						<TextField
+							id="status"
+							name="status"
+							type="status"
+							value={this.state.status}
+							onChange={this.handleChange}
+							placeholder="Status"
+							style={{ width: "15rem" }}
+						/>
+						<Typography variant="h6" style={{ marginTop: "2rem" }}>
+							Bio
+						</Typography>
+						<TextField
+							id="bio"
+							name="bio"
+							type="bio"
+							value={this.state.bio}
+							onChange={this.handleChange}
+							placeholder="Bio"
+							variant="outlined"
+							multiline
+							rows={3}
+							style={{ width: "15rem" }}
+						/>
+						<Typography variant="h6" style={{ marginTop: "2rem" }}>
+							Twitter
+						</Typography>
+						<TextField
+							id="twitter"
+							name="twitter"
+							type="twitter"
+							value={this.state.twitter}
+							onChange={this.handleChange}
+							placeholder="Twitter"
+							style={{ width: "15rem" }}
+						/>
+						<Typography variant="h6" style={{ marginTop: "2rem" }}>
+							Instagram
+						</Typography>
+						<TextField
+							id="instagram"
+							name="instagram"
+							type="instagram"
+							value={this.state.instagram}
+							onChange={this.handleChange}
+							placeholder="Instagram"
+							style={{ width: "15rem" }}
+						/>
+						<Typography variant="h6" style={{ marginTop: "2rem" }}>
+							Youtube
+						</Typography>
+						<TextField
+							id="youtube"
+							name="youtube"
+							type="youtube"
+							value={this.state.youtube}
+							onChange={this.handleChange}
+							placeholder="Youtube"
+							style={{ width: "15rem" }}
+						/>
+						<Typography variant="h6" style={{ marginTop: "2rem" }}>
+							LinkedIn
+						</Typography>
+						<TextField
+							id="linkedIn"
+							name="linkedIn"
+							type="linkedIn"
+							value={this.state.linkedIn}
+							onChange={this.handleChange}
+							placeholder="LinkedIn"
+							style={{ width: "15rem" }}
+						/>
+						<Typography variant="h6" style={{ marginTop: "2rem" }}>
+							Facebook
+						</Typography>
+						<TextField
+							id="facebook"
+							name="facebook"
+							type="facebook"
+							value={this.state.facebook}
+							onChange={this.handleChange}
+							placeholder="Facebook"
+							style={{ width: "15rem" }}
+						/>
+
+						{errors.errors && (
+							<Typography variant="body2" className={classes.error}>
+								{errors.errors}
+							</Typography>
+						)}
+						<Button
+							type="submit"
+							variant="contained"
+							color="primary"
+							className={classes.button}
+						>
+							Submit
+						</Button>
+					</form>
+				</div>
 			</Paper>
 		);
 	}

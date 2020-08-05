@@ -26,7 +26,9 @@ class Post extends Component {
 		}
 
 		return (
-			<div style={{ margin: "2rem auto", width: "1100px" }}>{postContent}</div>
+			<div style={{ margin: "2rem auto", maxWidth: "1100px" }}>
+				{postContent}
+			</div>
 		);
 	}
 }

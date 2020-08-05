@@ -23,17 +23,18 @@ class home extends Component {
 				direction="row"
 				justify="center"
 				alignItems="center"
-				spacing={3}
 				className={classes.mainGrid}
 			>
 				<Grid item xs={6} className={classes.textItem}>
-					<Typography variant="h4"> DEVELOPERS LANE</Typography>
-					<Typography
-						variant="h5"
-						style={{ paddingTop: "20px", marginRight: "90px" }}
-					>
-						A place where developers and designers share their work{" "}
-					</Typography>
+					<div className="title">
+						<Typography variant="h4"> DEVELOPERS LANE</Typography>
+						<Typography
+							variant="h5"
+							style={{ paddingTop: "1.2rem", marginRight: "5rem" }}
+						>
+							A place where developers and designers share their work{" "}
+						</Typography>
+					</div>
 					<Button
 						variant="contained"
 						color="primary"
@@ -44,7 +45,7 @@ class home extends Component {
 						Signup
 					</Button>
 				</Grid>
-				<Grid item xs={6}>
+				<Grid item xs={6} className={classes.img}>
 					<img src={creator_svg} className={classes.svg} alt="creator" />
 				</Grid>
 			</Grid>

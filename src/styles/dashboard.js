@@ -1,13 +1,19 @@
 const styles = (theme) => ({
 	start: {
-		width: "50rem",
 		margin: "2rem auto",
-		display: "flex",
-		height: "60vh",
 	},
 	container: {
 		maxWidth: "1100px",
 		margin: "2rem auto",
+	},
+	dashboardContainer: {
+		width: `100%`,
+		flexGrow: 1,
+		justifyContent: `center`,
+		alignItems: `center`,
+		[theme.breakpoints.down("xs")]: {
+			flexDirection: "row",
+		},
 	},
 	createProfile: {
 		marginTop: "2rem",
@@ -28,8 +34,8 @@ const styles = (theme) => ({
 		margin: "2rem auto",
 	},
 	imageWrapper: {
-		textAlign: "center",
-		position: "relative",
+		// textAlign: "center",
+		// position: "relative",
 		margin: "2rem",
 	},
 	profileImage: {
@@ -39,7 +45,7 @@ const styles = (theme) => ({
 		objectFit: "cover",
 	},
 	subroot: {
-		width: "35rem",
+		// width: "35rem",
 	},
 	items: {
 		display: "flex",

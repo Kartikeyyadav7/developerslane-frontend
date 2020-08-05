@@ -10,7 +10,8 @@ const styles = (theme) => ({
 	formItems: {
 		marginTop: "5rem",
 		alignSelf: "center",
-		width: "13rem",
+		width: "auto",
+		marginLeft: "1rem",
 	},
 	error: {
 		marginTop: "1rem",
@@ -23,6 +24,7 @@ const styles = (theme) => ({
 		margin: "2rem 0 2rem 4rem",
 		width: "5rem",
 		alignSelf: "center",
+		display: "block",
 	},
 });
 export default styles;
